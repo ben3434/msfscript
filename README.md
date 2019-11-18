@@ -1,0 +1,2 @@
+# msfscript
+MSF Auto Script
