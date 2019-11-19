@@ -1,4 +1,4 @@
-# msfscript
+# Shadow Drop
 Shadow Drop Automated Network Penetration Test Script
 
 Incomplete
