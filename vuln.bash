@@ -1,4 +1,15 @@
 #!/bin/bash
+###---Define Functions---###
+function load(){
+        for i in range {1..5}
+        do
+                echo "."
+                echo
+                sleep .05
+        done
+}
+
+###---Read / Collect Target IP Address---###
 if [[ $target == "" ]]
 then
         echo -n "Enter a target: "
@@ -7,7 +18,7 @@ else
         :
 fi
 
-###  CHECK FOR / CREATE TARGET INTEL FILES  ###
+###---CHECK FOR / CREATE TARGET INTEL FILES---###
 
 #Run nmap vuln scan if no file exists/user chooses to
 clear
@@ -33,6 +44,7 @@ else
 			;;
 esac
 fi
+#Convert XML file to human-readable HTML for final report
 xsltproc nmap-vuln-$target.xml -o nmap-vuln.html
 
 #Run nmap malware scan if no file exists/user chooses to
@@ -59,4 +71,6 @@ else
                         ;;
 esac
 fi
+
+#Convert XML file to human-readable HTML for final report
 xsltproc nmap-mal-$target.xml -o nmap-malware.html
