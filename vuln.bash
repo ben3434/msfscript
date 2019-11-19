@@ -1,5 +1,5 @@
 #!/bin/bash
-###---Define Functions---###
+###---DEFINE FUNCTIONS---###
 function load(){
         for i in range {1..5}
         do
@@ -9,7 +9,8 @@ function load(){
         done
 }
 
-###---Read / Collect Target IP Address---###
+###---READ // COLLECT TARGET IP ADDRESS---###
+clear
 if [[ $target == "" ]]
 then
         echo -n "Enter a target: "
@@ -17,11 +18,10 @@ then
 else
         :
 fi
+load
 
-###---CHECK FOR / CREATE TARGET INTEL FILES---###
-
+###---CHECK FOR // CREATE TARGET INTEL FILES---###
 #Run nmap vuln scan if no file exists/user chooses to
-clear
 if [[ ! -f nmap-vuln-$target.xml ]]
 then
 echo "No existing nmap vulnerability scan file present"
@@ -48,7 +48,6 @@ fi
 xsltproc nmap-vuln-$target.xml -o nmap-vuln.html
 
 #Run nmap malware scan if no file exists/user chooses to
-clear
 if [[ ! -f nmap-mal-$target.xml ]]
 then
 echo "No existing nmap malware scan file present"
@@ -74,3 +73,5 @@ fi
 
 #Convert XML file to human-readable HTML for final report
 xsltproc nmap-mal-$target.xml -o nmap-malware.html
+
+echo "VULNERABILITY ANALYSIS OF $target COMPLETE"
