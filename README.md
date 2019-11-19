@@ -1,2 +1,5 @@
 # msfscript
-MSF Auto Script
+Shadow Drop Automated Network Penetration Test Script
+
+Incomplete
+	-main.bash
