@@ -44,6 +44,7 @@ else
 			;;
 esac
 fi
+
 #Convert XML file to human-readable HTML for final report
 xsltproc nmap-vuln-$target.xml -o nmap-vuln.html
 
