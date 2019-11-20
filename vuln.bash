@@ -1,5 +1,5 @@
 #!/bin/bash
-###---DEFINE FUNCTIONS---###
+###------------------------------DEFINE FUNCTIONS------------------------------###
 function load(){
         for i in range {1..5}
         do
@@ -9,7 +9,7 @@ function load(){
         done
 }
 
-###---READ // COLLECT TARGET IP ADDRESS---###
+###------------------------------READ // COLLECT TARGET IP ADDRESS------------------------------###
 clear
 if [[ $target == "" ]]
 then
@@ -20,7 +20,7 @@ else
 fi
 load
 
-###---CHECK FOR // CREATE TARGET INTEL FILES---###
+###------------------------------CHECK FOR // CREATE TARGET INTEL FILES------------------------------###
 #Run nmap vuln scan if no file exists/user chooses to
 if [[ ! -f nmap-vuln-$target.xml ]]
 then

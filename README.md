@@ -12,3 +12,4 @@ Completed
 To Do:
 	-Change naming scheme to include $target
 	-Mod report.bash to file files in subfolders by $target
+	-Integrate a progress bar/indicator in exploit phase
