@@ -3,16 +3,15 @@ Shadow Drop Automated Network Penetration Test Script
 
 Incomplete
 	-main.bash
-	-exploit.bash
 Completed
 	-recon.bash
 	-vuln.bash
 	-report.bash
+	-exploit.bash
 
 To Do
 	-Clean up end of exploit.bash (proper file cleanup using function)
 	-Auto multi-target run via hosts.txt/main.bash
-	-Brute scan parsing
 USAGE:
 	The script is composed of five modules: Recon, Vuln, Exploit, and Report. Main.bash runs them all 
 together but they can be used individually if desired. 
