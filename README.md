@@ -13,6 +13,7 @@ To Do
 	-Clean up end of exploit.bash (proper file cleanup using function)
 	-Why no shell on first run?
 	-Auto multi-target run via hosts.txt/main.bash
+	-Brute scan parsing
 USAGE:
 	The script is composed of five modules: Recon, Vuln, Exploit, and Report. Main.bash runs them all 
 together but they can be used individually if desired. 
