@@ -1,6 +1,7 @@
 #!/bin/bash
-mkdir -p "Final_Report"
-cp *.html Final_Report
-cp services.txt Final_Report
-cp cve.txt Final_Report
-
+target=$(cat target.txt)
+mkdir -p "Final_Report/Report-$target"
+cp *-$target.html Final_Report/Report-$target
+cp services.txt Final_Report/Report-$target && mv Final_Report/Report-$target/services.txt Final_Report/Report-$target/services-$target.txt
+cp cve.txt Final_Report/Report-$target && mv Final_Report/Report-$target/cve.txt Final_Report/Report-$target/cve-$target.txt
+cp shells.txt Final_Report/Report-$target && mv Final_Report/Report-$target/shells.txt Final_Report/Report-$target/shells-$target.txt
