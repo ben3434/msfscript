@@ -11,10 +11,12 @@ function load(){
 
 ###------------------------------READ // COLLECT TARGET IP ADDRESS------------------------------###
 clear
+target=$(cat target.txt)
 if [[ $target == "" ]]
 then
         echo -n "Enter a target: "
         read target
+	echo $target > target.txt
 else
         :
 fi
@@ -46,7 +48,7 @@ esac
 fi
 
 #Convert XML file to human-readable HTML for final report
-xsltproc nmap-vuln-$target.xml -o nmap-vuln.html
+xsltproc nmap-vuln-$target.xml -o nmap-vuln-$target.html
 
 #Run nmap malware scan if no file exists/user chooses to
 if [[ ! -f nmap-mal-$target.xml ]]
@@ -73,6 +75,6 @@ esac
 fi
 
 #Convert XML file to human-readable HTML for final report
-xsltproc nmap-mal-$target.xml -o nmap-malware.html
+xsltproc nmap-mal-$target.xml -o nmap-malware-$target.html
 
 echo "VULNERABILITY ANALYSIS OF $target COMPLETE"
