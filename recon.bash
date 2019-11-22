@@ -1,3 +1,3 @@
 #!/bin/bash
-touch target.txt
+echo "" > target.txt
 timeout 120 netdiscover -PN > hosts.txt
