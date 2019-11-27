@@ -27,7 +27,7 @@ fi
 if [[ ! -f nmap-vuln-$target.xml ]]
 then
 echo "No existing nmap vulnerability scan file present"
-echo "initiating scan..."
+echo "Initiating scan..."
 load
 nmap $target -T5 -A -sV -oX nmap-vuln-$target.xml --script=vuln
 load
@@ -56,7 +56,7 @@ xsltproc nmap-vuln-$target.xml -o nmap-vuln-$target.html
 if [[ ! -f nmap-mal-$target.xml ]]
 then
 echo "No existing nmap malware scan file present"
-echo "initiating scan..."
+echo "Initiating scan..."
 load
 nmap $target -T5 -A -sV -oX nmap-mal-$target.xml --script=malware
 load
